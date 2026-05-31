@@ -1,22 +1,20 @@
-import About from "@/components/home/About";
-import Cta from "@/components/home/Cta";
-import Events from "@/components/home/Events";
-import Gallery from "@/components/home/Gallery";
-import Hero from "@/components/home/Hero";
-import MusicPlayer from "@/components/home/MusicPlayer";
-import Playlist from "@/components/home/Playlist";
+import BlogSection from "@/components/home/BlogSection";
+import CreatorsSection from "@/components/home/CreatorsSection";
+import CtaSection from "@/components/home/CtaSection";
+import HeroSection from "@/components/home/HeroSection";
+import PartnersSection from "@/components/home/PartnersSection";
+import ServicesSection from "@/components/home/ServicesSection";
 import React from "react";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Playlist />
-      <About />
-      <Gallery />
-      <MusicPlayer />
-      <Events />
-      <Cta />
+      <HeroSection />
+      <PartnersSection />
+      <ServicesSection />
+      <CreatorsSection />
+      <BlogSection />
+      <CtaSection />
     </main>
   );
 }

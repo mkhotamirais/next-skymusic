@@ -1,44 +1,75 @@
-import React from "react";
+import Link from "next/link";
+import { IoLogoInstagram, IoLogoTiktok, IoLogoYoutube } from "react-icons/io5";
+import { socialLinks } from "@/lib/content";
+import Logo from "../Logo";
+
+const socialIcons = {
+  Instagram: IoLogoInstagram,
+  TikTok: IoLogoTiktok,
+  YouTube: IoLogoYoutube,
+} as const;
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-zinc-950 border-t border-zinc-900 py-12 relative z-10">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="font-heading text-lg font-bold tracking-wider text-zinc-100">
-              MIDNIGHT<span className="text-violet-400">PULSE</span>
-            </h3>
-            <p className="text-xs text-zinc-500 mt-1 font-sans">Menemani frekuensi malammu sejak 2026.</p>
+    <footer className="relative z-10 border-t border-zinc-900 bg-zinc-950 py-14 md:py-20">
+      <div className="container">
+        {/* Main */}
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+          {/* Brand */}
+          <div className="max-w-md">
+            <Logo />
+            <p className="mt-4 text-base leading-relaxed text-zinc-400 md:text-lg">
+              Agensi pemasaran musik digital — membantu brand, artis, dan label menjangkau audiens lebih luas melalui
+              strategi konten dan campaign.
+            </p>
           </div>
 
-          <div className="flex gap-6 text-sm text-zinc-400 font-sans">
-            <a href="#" className="hover:text-zinc-100 transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-zinc-100 transition-colors">
-              Terms
-            </a>
-            <a href="#" className="hover:text-zinc-100 transition-colors">
-              Contact
-            </a>
-          </div>
+          {/* Social + email */}
+          <div className="md:text-right">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-zinc-400">Ikuti Kami</p>
 
-          <div className="flex gap-4 text-zinc-500 text-sm font-mono">
-            <a href="#" className="hover:text-fuchsia-400 transition-colors">
-              IG
-            </a>
-            <a href="#" className="hover:text-cyan-400 transition-colors">
-              YT
-            </a>
-            <a href="#" className="hover:text-green-400 transition-colors">
-              SP
+            <div className="flex gap-3 md:justify-end">
+              {socialLinks.map((social) => {
+                const Icon = socialIcons[social.name as keyof typeof socialIcons];
+                if (!Icon) return null;
+
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-800 text-xl text-zinc-400 transition-colors hover:border-zinc-700 hover:text-violet-400"
+                  >
+                    <Icon aria-hidden="true" />
+                  </a>
+                );
+              })}
+            </div>
+
+            <a
+              href="mailto:hello@skymusic.id"
+              className="mt-5 inline-block text-base text-zinc-400 transition-colors hover:text-zinc-200 md:text-lg"
+            >
+              hello@skymusic.id
             </a>
           </div>
         </div>
 
-        <div className="text-center text-[10px] text-zinc-600 font-mono mt-12">
-          &copy; {new Date().getFullYear()} MIDNIGHT PULSE. All rights reserved. Built with Next.js & Tailwind.
+        {/* Copyright */}
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-zinc-900 pt-8 text-center md:flex-row md:text-left">
+          <p className="text-sm text-zinc-500">&copy; {currentYear} Skymusic. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-zinc-500">
+            <Link href="#" className="transition-colors hover:text-zinc-300">
+              Privacy
+            </Link>
+            <Link href="#" className="transition-colors hover:text-zinc-300">
+              Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
