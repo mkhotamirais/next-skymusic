@@ -1,3 +1,4 @@
+import { contacts } from "@/lib/content";
 import Link from "next/link";
 
 export default function CtaSection() {
@@ -28,7 +29,7 @@ export default function CtaSection() {
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link href="/contact" className="btn btn-primary">
+          <Link href={contacts.waNumber.href} className="btn btn-primary">
             Hubungi Kami
           </Link>
           <Link href="/services" className="btn btn-secondary">

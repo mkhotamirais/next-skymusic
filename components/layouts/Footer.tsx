@@ -51,10 +51,10 @@ export default function Footer() {
             </div>
 
             <a
-              href="mailto:hello@skymusic.id"
+              href="mailto:hallo@skymusic.id"
               className="mt-5 inline-block text-base text-zinc-400 transition-colors hover:text-zinc-200 md:text-lg"
             >
-              hello@skymusic.id
+              hallo@skymusic.id
             </a>
           </div>
         </div>
