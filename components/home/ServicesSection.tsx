@@ -26,7 +26,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Grid layanan — baris bawah 2 kartu ditengah di desktop */}
-        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
+        {/* <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {services.map((service, index) => (
             <li key={service.id} className={`lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""}`}>
               <article className="group flex h-full flex-col rounded-2xl border border-zinc-800/80 bg-zinc-950 p-6 transition-colors duration-300 hover:border-zinc-700">
@@ -38,6 +38,30 @@ export default function ServicesSection() {
               </article>
             </li>
           ))}
+        </ul> */}
+
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
+          {services.map((service, index) => {
+            // Menentukan span dan start kolom untuk layar besar (lg)
+            let lgClass = "lg:col-span-4"; // Default baris pertama (12 kolom / 3 item = span 4)
+
+            if (index >= 3) {
+              // Baris kedua berisi 4 item (masing-masing span 3 -> total 12 kolom)
+              lgClass = "lg:col-span-3";
+            }
+
+            return (
+              <li key={service.id} className={`${lgClass}`}>
+                <article className="group flex h-full flex-col rounded-2xl border border-zinc-800/80 bg-zinc-950 p-6 transition-colors duration-300 hover:border-zinc-700">
+                  <span className="font-mono text-xs font-bold text-violet-400">{service.id}</span>
+                  <h3 className="mt-3 text-base font-bold text-zinc-100 transition-colors group-hover:text-violet-300 sm:text-lg">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{service.description}</p>
+                </article>
+              </li>
+            );
+          })}
         </ul>
 
         {/* CTA */}

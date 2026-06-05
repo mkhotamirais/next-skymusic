@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-[100dvh] items-center overflow-hidden bg-zinc-950 pt-24 pb-16 text-zinc-50">
+    <section className="relative flex min-h-dvh items-center overflow-hidden bg-zinc-950 pt-24 pb-16 text-zinc-50">
       {/* Glow */}
       <div
         aria-hidden
@@ -70,7 +70,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="relative mx-auto aspect-[5/4] w-full max-w-lg overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl shadow-black/30 lg:max-w-none"
+            className="relative mx-auto aspect-5/4 w-full max-w-lg overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl shadow-black/30 lg:max-w-none"
           >
             <Image
               src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -79,6 +79,7 @@ export default function HeroSection() {
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
+              loading="eager"
             />
             <div className="absolute inset-0 bg-linear-to-t from-zinc-950/60 via-transparent to-transparent" />
           </motion.div>

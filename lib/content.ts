@@ -5,6 +5,14 @@ export const menu = [
   { name: "Blog", href: "/blog" },
 ];
 
+export const contacts = {
+  waNumber: {
+    label: "+62 857-1669-8700",
+    href: "https://wa.me/6285716698700?text=Halo%20Skymusic%2C%20saya%20tertarik%20dengan%20layanan%20Anda",
+  },
+  email: { label: "Email", href: "mailto:hallo@skymusic.com" },
+};
+
 export const partners = [
   "Sony Music",
   "Universal Music",
@@ -91,6 +99,36 @@ export const services = [
       "Iterasi berdasarkan performa clip",
     ],
     image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    id: "06",
+    title: "Performance Ads",
+    description:
+      "Kampanye iklan digital berbasis data yang dioptimalkan untuk meningkatkan streaming, konversi link rilis, dan penjualan tiket.",
+    summary:
+      "Memaksimalkan ROI iklan melalui targeting yang presisi pada platform Meta, Google, dan TikTok Ads untuk mengonversi audiens menjadi pendengar setia.",
+    features: [
+      "Setup & optimasi Meta, TikTok, & Google Ads",
+      "A/B testing materi kreatif & audio",
+      "Targeting audiens spesifik berbasis genre & minat",
+      "Analisis data konversi & laporan berkala",
+    ],
+    image: "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    id: "07",
+    title: "Public Relations (PR)",
+    description:
+      "Manajemen reputasi dan distribusi siaran pers terarah ke media musik, radio, serta jurnalis untuk membangun kredibilitas rilis.",
+    summary:
+      "Menghubungkan karya musik Anda dengan ekosistem media arus utama dan independen guna mendapatkan exposure publik yang organik dan kredibel.",
+    features: [
+      "Penulisan & distribusi press release profesional",
+      "Pitching ke media musik digital & cetak",
+      "Media visit & koordinasi interview radio",
+      "Monitoring publisitas & kompilasi kliping berita",
+    ],
+    image: "https://images.pexels.com/photos/3727463/pexels-photo-3727463.jpeg?auto=compress&cs=tinysrgb&w=1200",
   },
 ];
 

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { menu } from "@/lib/content";
+import { contacts, menu } from "@/lib/content";
 import Logo from "../Logo";
 
 function MenuIcon({ open }: { open: boolean }) {
@@ -72,7 +72,10 @@ export default function Header() {
             ))}
           </nav>
 
-          <Link href="/contact" className="btn btn-primary hidden shrink-0 px-5 py-2 text-xs md:inline-flex">
+          <Link
+            href={contacts.waNumber.href}
+            className="btn btn-primary hidden shrink-0 px-5 py-2 text-xs md:inline-flex"
+          >
             Hubungi Kami
           </Link>
 
@@ -110,7 +113,7 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-          <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="btn btn-primary mt-2">
+          <Link href={contacts.waNumber.href} onClick={() => setIsMenuOpen(false)} className="btn btn-primary mt-2">
             Hubungi Kami
           </Link>
         </nav>

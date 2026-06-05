@@ -1,4 +1,4 @@
-import { partners } from "@/lib/content";
+// import { partners } from "@/lib/content";
 
 export default function PartnersSection() {
   return (
@@ -26,7 +26,7 @@ export default function PartnersSection() {
         </div>
 
         {/* Daftar partner */}
-        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12">
+        {/* <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12">
           {partners.map((name) => (
             <li
               key={name}
@@ -35,7 +35,7 @@ export default function PartnersSection() {
               {name}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );
