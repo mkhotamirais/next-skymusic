@@ -11,7 +11,7 @@ export async function sendEmail({ name, email, message }: { name: string; email:
     const { error } = await resend.emails.send({
       // from: "Acme <onboarding@resend.dev>",
       // to: ["delivered@resend.dev"],
-      from: "Vryce Contact <hallo@skymusic.id>",
+      from: "Skymusic Contact <hallo@skymusic.id>",
       to: ["hallo@skymusic.id"],
       replyTo: email,
       subject: `Pesan Baru: ${name} via skymusic.id`,
