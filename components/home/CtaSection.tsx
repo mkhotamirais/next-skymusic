@@ -1,9 +1,10 @@
-import { contacts } from "@/lib/content";
-import Link from "next/link";
+"use client";
+
+import ContactForm from "../ContactForm";
 
 export default function CtaSection() {
   return (
-    <section className="relative overflow-hidden bg-zinc-950 py-20 md:py-28" aria-labelledby="cta-heading">
+    <section id="contact" className="relative overflow-hidden bg-zinc-950 py-20 md:py-28" aria-labelledby="cta-heading">
       {/* Glow halus */}
       <div
         aria-hidden
@@ -28,13 +29,17 @@ export default function CtaSection() {
           Konsultasikan kebutuhan distribusi, campaign, dan engagement dengan tim Skymusic.
         </p>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        {/* <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link href={contacts.waNumber.href} className="btn btn-primary">
             Hubungi Kami
           </Link>
           <Link href="/services" className="btn btn-secondary">
             Lihat Layanan
           </Link>
+        </div> */}
+
+        <div>
+          <ContactForm />
         </div>
       </div>
     </section>

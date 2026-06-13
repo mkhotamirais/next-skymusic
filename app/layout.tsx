@@ -3,6 +3,7 @@ import { Syne } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
+import { Toaster } from "sonner";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -27,6 +28,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100">
+        <Toaster position="top-center" richColors swipeDirections={["left", "right", "top"]} />
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

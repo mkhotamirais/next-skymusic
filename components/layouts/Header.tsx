@@ -72,12 +72,15 @@ export default function Header() {
             ))}
           </nav>
 
-          <Link
+          {/* <Link
             href={contacts.waNumber.href}
             className="btn btn-primary hidden shrink-0 px-5 py-2 text-xs md:inline-flex"
           >
             Hubungi Kami
-          </Link>
+          </Link> */}
+          <a href={"/#contact"} className="btn btn-primary hidden shrink-0 px-5 py-2 text-xs md:inline-flex">
+            Hubungi Kami
+          </a>
 
           <button
             type="button"
