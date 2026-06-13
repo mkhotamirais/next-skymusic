@@ -19,13 +19,13 @@ export function HeroContactDropdown() {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem asChild>
-          <a href={contacts.waNumber.href} target="_blank" rel="noopener noreferrer">
+          <a href={contacts.waNumber.href} target="_blank" rel="noopener noreferrer" className="p-2!">
             <SiWhatsapp className="mr-2 h-4 w-4" />
             WhatsApp
           </a>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/#contact">
+          <Link href="/#contact" className="p-2!">
             <Mail className="mr-2 h-4 w-4" />
             Email
           </Link>
