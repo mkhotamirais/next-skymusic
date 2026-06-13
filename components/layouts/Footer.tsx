@@ -50,12 +50,12 @@ export default function Footer() {
               })}
             </div>
 
-            <a
-              href="mailto:hallo@skymusic.id"
+            <Link
+              href="/#contact"
               className="mt-5 inline-block text-base text-zinc-400 transition-colors hover:text-zinc-200 md:text-lg"
             >
               hallo@skymusic.id
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { contacts } from "@/lib/content";
+import { HeroContactDropdown } from "./HeroContactDropdown";
 
 export default function HeroSection() {
   return (
@@ -57,9 +58,10 @@ export default function HeroSection() {
               transition={{ duration: 0.45, delay: 0.15 }}
               className="flex flex-col gap-3 pt-1 sm:flex-row sm:justify-center lg:justify-start"
             >
-              <Link href={contacts.waNumber.href} className="btn btn-primary">
+              {/* <Link href={contacts.waNumber.href} className="btn btn-primary">
                 Mulai Konsultasi
-              </Link>
+              </Link> */}
+              <HeroContactDropdown />
               <Link href="/services" className="btn btn-secondary">
                 Pelajari Layanan
               </Link>
