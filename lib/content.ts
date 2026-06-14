@@ -136,7 +136,7 @@ export const creatorsPreview = [
   {
     name: "fadhilaaa.n",
     role: "Talent · Producer / DJ",
-    image: "https://images.pexels.com/photos/164745/pexels-photo-164745.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/creators/dhilla.jpeg",
     followers: "450K",
   },
   {
