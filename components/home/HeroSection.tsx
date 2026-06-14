@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { contacts } from "@/lib/content";
 import { HeroContactDropdown } from "./HeroContactDropdown";
 
 export default function HeroSection() {

@@ -14,7 +14,7 @@ export function HeroContactDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button type="button" className="btn btn-primary">
-          Mulai Konsultasi
+          Hubungi Kami
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>

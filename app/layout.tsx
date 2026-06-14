@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import { Toaster } from "sonner";
+import EdgeButton from "@/components/EdgeButton";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />
+        <EdgeButton />
       </body>
     </html>
   );
