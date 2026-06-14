@@ -134,19 +134,22 @@ export const services = [
 
 export const creatorsPreview = [
   {
-    name: "Arka Narendra",
+    name: "fadhilaaa.n",
     role: "Talent · Producer / DJ",
     image: "https://images.pexels.com/photos/164745/pexels-photo-164745.jpeg?auto=compress&cs=tinysrgb&w=800",
+    followers: "450K",
   },
   {
     name: "Nabila Putri",
     role: "Creator · Content & Cover",
     image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=800",
+    followers: "500K",
   },
   {
     name: "Midnight Pulse Crew",
     role: "Clipper · Viral Shorts",
     image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
+    followers: "625K",
   },
 ];
 

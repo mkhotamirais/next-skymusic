@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { creatorsPreview } from "@/lib/content";
+import { Users } from "lucide-react";
 
 export default function CreatorsSection() {
   return (
@@ -15,9 +16,9 @@ export default function CreatorsSection() {
             </span>
 
             <h2 id="creators-heading" className="text-2xl font-bold tracking-tight text-zinc-50 sm:text-3xl">
-              Wajah Kreatif di Balik{" "}
+              Meet Our Hundreds of{" "}
               <span className="bg-linear-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-                Kampanye Musik
+                Content Creators
               </span>
             </h2>
 
@@ -36,7 +37,7 @@ export default function CreatorsSection() {
           {creatorsPreview.map((person) => (
             <li key={person.name}>
               <article className="group overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/40 transition-colors duration-300 hover:border-zinc-700">
-                <div className="relative aspect-[4/5] overflow-hidden bg-zinc-900">
+                <div className="relative aspect-4/5 overflow-hidden bg-zinc-900">
                   <Image
                     src={person.image}
                     alt={person.name}
@@ -46,10 +47,12 @@ export default function CreatorsSection() {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-950/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-violet-400">
-                      {person.role}
-                    </p>
+                    {/* <p className="text-[10px] font-bold uppercase tracking-widest text-violet-400">{person.role}</p> */}
                     <h3 className="mt-1 text-lg font-bold text-zinc-50">{person.name}</h3>
+                    <p className="text-sm text-zinc-400 mt-1">
+                      <Users className="inline-block h-4 w-4  mr-2" />
+                      {person.followers} followers
+                    </p>
                   </div>
                 </div>
               </article>
