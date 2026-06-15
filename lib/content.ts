@@ -140,10 +140,10 @@ export const creatorsPreview = [
     followers: "450K",
   },
   {
-    name: "Nabila Putri",
+    name: "superkenshin1",
     role: "Creator · Content & Cover",
-    image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=800",
-    followers: "500K",
+    image: "/creators/superkenshin1.jpeg",
+    followers: "148k",
   },
   {
     name: "Midnight Pulse Crew",
