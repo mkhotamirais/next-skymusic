@@ -1,5 +1,5 @@
 import BlogSection from "@/components/home/BlogSection";
-import CreatorsSection from "@/components/home/CreatorsSection";
+// import CreatorsSection from "@/components/home/CreatorsSection";
 import CtaSection from "@/components/home/CtaSection";
 import HeroSection from "@/components/home/HeroSection";
 import PartnersSection from "@/components/home/PartnersSection";
@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <PartnersSection />
       <ServicesSection />
-      <CreatorsSection />
+      {/* <CreatorsSection /> */}
       <BlogSection />
       <CtaSection />
     </main>
