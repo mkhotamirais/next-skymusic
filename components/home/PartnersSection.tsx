@@ -1,4 +1,5 @@
-// import { partners } from "@/lib/content";
+import { partners } from "@/lib/content";
+import Image from "next/image";
 
 export default function PartnersSection() {
   return (
@@ -26,16 +27,17 @@ export default function PartnersSection() {
         </div>
 
         {/* Daftar partner */}
-        {/* <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12">
-          {partners.map((name) => (
+        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12">
+          {partners.map(({ name, logo }) => (
             <li
               key={name}
-              className="text-sm font-semibold tracking-wide text-zinc-500 transition-colors duration-300 hover:text-zinc-200 md:text-base"
+              className="bg-gray-200 aspect-3/2 h-28 flex items-center justify-center rounded-lg p-4"
+              // className="text-sm font-semibold tracking-wide text-zinc-500 transition-colors duration-300 hover:text-zinc-200 md:text-base"
             >
-              {name}
+              <Image src={logo} alt={name} width={100} height={100} className="w-auto" />
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </section>
   );

@@ -43,11 +43,12 @@ export default function ServicesSection() {
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
           {services.map((service, index) => {
             // Menentukan span dan start kolom untuk layar besar (lg)
+            // let lgClass = "lg:col-span-4"; // Default baris pertama (12 kolom / 3 item = span 4)
             let lgClass = "lg:col-span-4"; // Default baris pertama (12 kolom / 3 item = span 4)
 
             if (index >= 3) {
               // Baris kedua berisi 4 item (masing-masing span 3 -> total 12 kolom)
-              lgClass = "lg:col-span-3";
+              lgClass = "lg:col-span-6";
             }
 
             return (
